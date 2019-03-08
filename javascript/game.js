@@ -44,7 +44,9 @@ $(document).ready(function() {
             $("#crystals").append(image);
             console.log("Value of crystal " + (i+1) + " : " + crystals[i].value);
         }
-        console.log("Target value: " + targetValue);   
+        console.log("Target value: " + targetValue);
+        $("#target-value").text(targetValue); 
+        $("#current-value").text(userTotal); 
     }
 
     // gets value from the clicked crystal and adds it to the userTotal
@@ -62,7 +64,15 @@ $(document).ready(function() {
             console.log("Loses: " + loses);
             startUp();
         }
+        $("#target-value").text(targetValue); 
+        $("#current-value").text(userTotal);
         console.log(userTotal);
+    });
+
+    $(".button").on("click", function(){
+        $("#instructions").toggle();
+        $(".button").text("Hide");
+        
     });
 
 });

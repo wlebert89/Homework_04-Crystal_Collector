@@ -6,15 +6,103 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Collector</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Cormorant+Infant|Elsie|Flamenco|Glass+Antiqua|Maitree|Mystery+Quest" rel="stylesheet">
+    
     
 </head>
 <body>
-    <div id="crystals"></div>
-    
+    <!-- <div class="container">
+        <h1>Crystal Collector</h1>
+    </div>
+    <div class="container">
+        <div id="instructions" class="hide">
+            <p>
+                Four crystals are diplayed below. Their values have been randomly generated, 
+                but will remain constant for the duration of each round.
+                The number displayed in the bottom left is your target value.
+                The number in the bottom right is your current value.
+            </p>
+            <p>
+                Click on the crystals to increase your current value. If you can match your value to the target value, you win.
+                If at any point your value exceeds the target value, you lose. 
+                In either event, all values will regenerate at the start of each round.
+            </p>
+        </div>
+        <div class="button">Instructions</div>
+    </div>
+    <div class="container">
+        <div id="crystals"></div>
+    </div>
+    <div class="container">
+        <div class="score">
+            <h2>Target Value</h2>
+            <h1 id="target-value"></h1>
+        </div>
+        <div class="score">
+            <h2>Current Value</h2>
+            <h1 id="current-value"></h1> 
+        </div>
+    </div> -->
+<div class="wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 main-layout">
+                <h1 id="title">Crystal Collector</h1>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 main-layout">
+                <div id="instructions">
+                    <p>
+                        Four crystals are diplayed below. Their values have been randomly generated, 
+                        but will remain constant for the duration of each round.
+                        The number displayed in the bottom left is your target value.
+                        The number in the bottom right is your current value.
+                    </p>
+                    <p>
+                        Click on the crystals to increase your current value. If you can match your value to the target value, you win.
+                        If at any point your value exceeds the target value, you lose. 
+                        In either event, all values will regenerate at the start of each round.
+                    </p>
+                </div>
+                <div class="button">Instructions</div>
+            </div>
+        </div>
 
+        <div class="row">
+            <div class="col-md-12 main-layout">
+                <div id="crystals"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5 main-layout">
+                <h2>Target Value</h2>
+                <h1 id="target-value"></h1>
+            </div>
+            <div class="col-md-2">
+                <!-- Empty Div for spacing -->
+            </div>
+            <div class="col-md-5 main-layout">
+                <h2>Current Value</h2>
+                <h1 id="current-value"></h1>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+   
     
-    <script src="javascript/game.js"></script>
+<script src="javascript/game.js"></script>
 </body>
 </html>
