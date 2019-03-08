@@ -3,15 +3,10 @@
 }
 
 body {
-    font-family: 'Maitree', serif;
-    font-size: 16px;
+    margin-top: 100px;
+    font-family: 'Glass Antiqua', cursive;
+    font-size: 14px;
     background: #555;
-}
-
-.wrapper {
-    width: 500px;
-    margin: auto;
-    margin-top: 40px;
 }
 
 #title {
@@ -19,25 +14,14 @@ body {
 }
 
 .container {
-    padding: 0px;
-}
-
-.main-layout {
     margin: auto;
     margin-top: 10px;
-    background: #222;
-    border-radius: 20px;
-    text-align: center;
-}
-
-/* .container {
-    margin: auto;
-    margin-top: 20px;
     width: 500px;
     background: #222;
     border-radius: 20px;
-    padding: 10px;
-} */
+    padding: 5px;
+    overflow: auto;
+}
 
 h1 {
     font-family: 'Mystery Quest', cursive;
@@ -49,11 +33,18 @@ h1 {
 }
 
 h2 {
-    font-family: 'Maitree', serif;
     text-align: center;
     color: #eee;
     font-size: 24px;
     padding-top: 20px;
+}
+
+h3 {
+    text-align: center;
+    color: #eee;
+    font-size: 18px;
+    padding-top: 20px;
+    text-decoration: underline;
 }
 
 hr {
@@ -63,30 +54,24 @@ hr {
 
 
 
-/* img {
-    margin: 12px;
-    padding: 5px;
-    width: 20%; 
-} */
-
 img {
-    padding: 5px;
-    margin: 5px;
-    width: 22%;
+    padding: 10px;
+    width: 25%; 
 }
 
 img:hover, img:focus {
-   border: solid 2px #eee
+   padding: 12px;
 }
 
 #instructions {
     margin: auto;
     width: 90%;
     padding-top: 20px;
-    padding-bottom: 0px;
+    padding-bottom: 10px;
 }
 
 p {
+    font-family: 'Cinzel', serif;
     color: #eee;
     text-indent: 50px;
     line-height: 150%;
@@ -98,37 +83,34 @@ p {
     font-size: 13px;
     width: 120px;
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 0px;
-    background: #eee;
+    padding: 5px;
+    background: #333;
     border-radius: 10px;
+    color: #eee;
+}
+
+.button:hover {
+    background: #444;
+}
+
+.score {
+    float: left;
+    padding: 10px;
+    width: 25%;
 }
 
 .hide {
     display: none;
 }
 
-.score {
-    float: left;
-    margin: 0 auto;
-    margin: 20px;
-    width: 30%;
-    background: #555;
-    padding: 10px;
-}
-
-
 
 /* 
 FONT BANK
 
-font-family: 'Elsie', cursive;
-font-family: 'Flamenco', cursive;
 font-family: 'Mystery Quest', cursive;
+font-family: 'Maitree', serif;
 font-family: 'Glass Antiqua', cursive;
 font-family: 'Cinzel', serif;
-font-family: 'Maitree', serif;
-font-family: 'Cormorant Infant', serif;
+font-family: 'Cormorant', serif;
 
 */
