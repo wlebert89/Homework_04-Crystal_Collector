@@ -6,26 +6,28 @@
 // if the userTotal === targetValue, wins++ and all of the values regenerate
 // if the userTotal > targetValue, loses++ and all of the values regenerate
 
-window.onload = (function(){
+$(document).ready(function() {
 
-    var targetValue;
+    var targetValue = 0;
 
-    var crystalValue;
-
-    var userTotal;
+    var userTotal = 0;
 
     var wins = 0;
 
     var loses = 0;
 
     var crystals = [
-        {name: "crystal-1", value: 0, img: "img-1"},
-        {name: "crystal-2", value: 0, img: "img-2"},
-        {name: "crystal-3", value: 0, img: "img-3"},
-        {name: "crystal-4", value: 0, img: "img-4"},
+        {name: "crystal-1", value: 0, src: "https://via.placeholder.com/150"},
+        {name: "crystal-2", value: 0, src: "https://via.placeholder.com/150"},
+        {name: "crystal-3", value: 0, src: "https://via.placeholder.com/150"},
+        {name: "crystal-4", value: 0, src: "https://via.placeholder.com/150"},
     ]
 
+    startUp();
+
     function startUp(){
+        userTotal = 0
+        $("#crystals").empty();
         // random number generated for the targetValue
         targetValue = Math.floor(Math.random() * 101) + 19;
         // loops through the length of the crystals array
@@ -33,21 +35,34 @@ window.onload = (function(){
             // random value generated for each crystal
             crystals[i].value = Math.floor(Math.random() * 11) + 1;
             // creates an image with the class .crystal for each crystal
-            var image = $("<img class=crystal>");
-            // adds a value (from the randomly generated number) to each crystal
-            image.attr("value", crystals[i].value);
+            var image = $("<img>").addClass("crystal");
+            // adds a value attribute (from the randomly generated number) to each crystal
+            image.val(crystals[i].value);
+            // adds the image source link attribute to each crystal
+            image.attr("src", crystals[i].src);
             // adds each crystal to the page
             $("#crystals").append(image);
-            console.log(crystals[i].value);
+            console.log("Value of crystal " + (i+1) + " : " + crystals[i].value);
         }
-        
+        console.log("Target value: " + targetValue);   
     }
 
-    startUp();
-
     // gets value from the clicked crystal and adds it to the userTotal
-    $(".crystal").on("click", function(){
-        userTotal += this.value;
-    })
+    $(document).on("click",".crystal", function(){
+        userTotal += +this.value;
+        if (userTotal === targetValue){
+            alert("you win");
+            wins ++;
+            console.log("Wins: " + wins);
+            startUp();
+        }
+        else if (userTotal > targetValue){
+            alert("you lose");
+            loses ++;
+            console.log("Loses: " + loses);
+            startUp();
+        }
+        console.log(userTotal);
+    });
 
 });
