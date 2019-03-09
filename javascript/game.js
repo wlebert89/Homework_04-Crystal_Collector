@@ -9,10 +9,10 @@ $(document).ready(function() {
     var losses = 0;
 
     var crystals = [
-        {name: "crystal-1", value: 0, src: "https://via.placeholder.com/300"},
-        {name: "crystal-2", value: 0, src: "https://via.placeholder.com/300"},
-        {name: "crystal-3", value: 0, src: "https://via.placeholder.com/300"},
-        {name: "crystal-4", value: 0, src: "https://via.placeholder.com/300"},
+        {name: "crystal-1", value: 0, src: "images/crystal-01.jpg"},
+        {name: "crystal-2", value: 0, src: "images/crystal-02.jpg"},
+        {name: "crystal-3", value: 0, src: "images/crystal-03.jpg"},
+        {name: "crystal-4", value: 0, src: "images/crystal-04.jpg"},
     ]
 
     startUp();
